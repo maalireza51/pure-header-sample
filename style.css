@@ -1,0 +1,156 @@
+@font-face {
+    font-family: railway;
+    src: url(./fonts/Raleway/Raleway-VariableFont_wght.ttf);
+}
+
+body {
+    
+    font-family: railway, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    padding: 20px;
+    background: url('./img/bokeh_car_lights_bg.jpg');
+}
+
+header::before {
+    content:"";
+    display: block;
+    height: 100vh;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+nav {
+    position: relative;
+    margin: 10px;
+    padding: 20px;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a{
+    display: inline-block;
+    color: rgb(227, 227, 227);
+    text-decoration: none;
+    padding: 15px 20px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+nav ul li a:hover{
+    color: white;
+}
+
+nav ul li a.active{
+    color: black;
+    background-color: white;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+nav .logo {
+    font-size: 36px;
+    margin-top: -16px;
+    margin-right: auto;
+}
+
+nav .logo a{
+    color: white;
+}
+
+.header-title {
+    position: relative;
+    top: 40%;
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    text-align: center;
+    color: white;
+}
+
+.header-title a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 20px;
+    color: white;
+    background-color: rgb(75, 194, 231);
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.header-title a:hover{
+    background-color:rgb(139, 228, 255) ;
+}
+
+.mobile-display{
+    display:flex;
+    justify-content: space-between;
+    color:white;
+    font-size: 36px;
+}
+.mobile-display>a{
+    color: white;
+    text-decoration: none;
+}
+
+nav .menu-overlay{
+    display: none;
+    position: fixed;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+@media (min-width:768px) {
+    .mobile-display{display: none;}
+}
+
+@media (max-width:768px){
+    nav ul{
+        padding-top:20px;
+        flex-direction:column;
+        position:fixed;
+        left:-400px;
+        top:0;
+        bottom:0;
+        width:280px;
+        background-color:rgba(0,0,0,0.9);
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+    }
+}
